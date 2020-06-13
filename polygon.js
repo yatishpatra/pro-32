@@ -3,14 +3,14 @@ class Polygon {
         var options = {
             isStatic: true
         }
-        this.polygon = Bodies.circle(x, y, radius, options);
+        this.polygon = Bodies.circle(x, y, radius/2, options);
         this.radius = radius;
         World.add(world, this.polygon);
 }
  
     display() {
-        var pos =this.body.position;
-        var angle = this.body.angle;
+        var pos =this.polygon.position;
+        var angle = this.polygon.angle;
         push();
         translate(pos.x, pos.y);
         rotate(angle);
