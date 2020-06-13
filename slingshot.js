@@ -1,4 +1,4 @@
-class SlingShot{
+/*class SlingShot{
     constructor(bodyA, pointB){
         var options = {
             bodyA: bodyA,
@@ -24,4 +24,4 @@ class SlingShot{
         this.sling.bodyA = null;
     }
     
-}
+}*/

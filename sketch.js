@@ -29,9 +29,9 @@ function setup() {
 
   box9 = new Box(390, 55, 30, 40);
 
-  polygon1 = new Polygon(50, 200, 20);
+  polygon1 = new Polygon(100, 280, 40);
 
-  slingShot = new SlingShot(polygon1, {x: 100, y: 200});
+  //slingShot = new SlingShot(polygon1, {x: 100, y: 200});
 }
 
 function draw() {
@@ -51,13 +51,13 @@ function draw() {
   box9.display();
 
   polygon1.display();
-  slingShot.display();
+  //slingShot.display();
 }
 
-function mouseDragged(){
-  Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
-}
+//function mouseDragged(){
+  //Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
+//}
 
-function mouseReleased() {
+/*function mouseReleased() {
   slingShot.fly();
-}
+}*/

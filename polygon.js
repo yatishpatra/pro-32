@@ -1,7 +1,7 @@
 class Polygon {
     constructor(x, y, radius) {
         var options = {
-            isStatic: true
+            isStatic: false
         }
         this.polygon = Bodies.circle(x, y, radius/2, options);
         this.radius = radius;
@@ -14,6 +14,7 @@ class Polygon {
         push();
         translate(pos.x, pos.y);
         rotate(angle);
+        fill("yellow");
         ellipse(0, 0, this.radius, this.radius);
         pop();
     }
