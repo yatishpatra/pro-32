@@ -15,7 +15,7 @@ function setup() {
 
   createSprite(400, 200, 50, 50);
 
-  stand1 = new Ground(600,height,1200,20);
+  stand1 = new Ground(390,height - 100,200,20);
 
   box1 = new Box(330, 235, 30, 40);
   box2 = new Box(360, 235, 30, 40);
@@ -31,7 +31,7 @@ function setup() {
 
   polygon1 = new Polygon(100, 280, 40);
 
-  //slingShot = new SlingShot(polygon1, {x: 100, y: 200});
+  slingShot = new SlingShot(polygon1.body, {x: 100, y: 200});
 }
 
 function draw() {
@@ -51,13 +51,13 @@ function draw() {
   box9.display();
 
   polygon1.display();
-  //slingShot.display();
+  slingShot.display();
 }
 
-//function mouseDragged(){
-  //Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
-//}
+function mouseDragged(){
+  Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
+}
 
-/*function mouseReleased() {
+function mouseReleased() {
   slingShot.fly();
-}*/
+}
