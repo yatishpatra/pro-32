@@ -35,7 +35,7 @@ function setup() {
 }
 
 function draw() {
-  background("black");
+  background(0, 0, 0);
   Engine.update(engine);
 
   stand1.display();

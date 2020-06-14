@@ -8,6 +8,7 @@ class Polygon {
         }
         this.body = Bodies.circle(x, y, radius/2, options);
         this.radius = radius;
+        this.image = loadImage('Sprites/polygon.png');
         World.add(world, this.body);
 }
  
@@ -17,8 +18,8 @@ class Polygon {
         push();
         translate(pos.x, pos.y);
         rotate(angle);
-        fill("yellow");
-        ellipse(0, 0, this.radius, this.radius);
+        imageMode(CENTER);
+        image(this.image, 0, 0, this.width, this.height);
         pop();
     }
 }
