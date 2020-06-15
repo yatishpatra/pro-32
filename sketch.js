@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var engine, world;
-var stand1;
+var stand1, ground1;
 var box1, box2, box3, box4, box5, box6, box7, box8, box9;
 var polygon1, slingShot;
 
@@ -16,6 +16,7 @@ function setup() {
   createSprite(400, 200, 50, 50);
 
   stand1 = new Ground(390,height - 100,200,20);
+  ground1 = new Ground(400,height,800,20);
 
   box1 = new Box(330, 235, 30, 40);
   box2 = new Box(360, 235, 30, 40);
@@ -31,7 +32,7 @@ function setup() {
 
   polygon1 = new Polygon(100, 280, 40);
 
-  slingShot = new SlingShot(polygon1.body, {x: 100, y: 200});
+  slingShot = new SlingShot(polygon1.body, {x: 150, y: 200});
 }
 
 function draw() {
@@ -39,6 +40,7 @@ function draw() {
   Engine.update(engine);
 
   stand1.display();
+  ground1.display();
 
   box1.display();
   box2.display();
