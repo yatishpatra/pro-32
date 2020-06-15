@@ -6,22 +6,31 @@ class Box {
           'density':1.2,
           'isStatic': false
       }
-      this.body = Bodies.rectangle(x, y, width, height, options);
+      this.body1 = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
       this.height = height;
+      this.Visibility = 255;
       
-      World.add(world, this.body);
+      World.add(world, this.body1);
     }
     display(){
-      var pos =this.body.position;
-      var angle = this.body.angle;
-      push();
-      translate(pos.x, pos.y);
-      rotate(angle);
-      rectMode(CENTER);
-      strokeWeight(4);
-      fill("violet");
-      rect(0, 0, this.width, this.height);
-      pop();
+      var pos =this.body1.position;
+      var angle = this.body1.angle;
+      if(this.body1.speed < 8) {
+        push();
+        translate(pos.x, pos.y);
+        rotate(angle);
+        rectMode(CENTER);
+        strokeWeight(4);
+        fill("violet");
+        rect(0, 0, this.width, this.height);
+        pop();
+      } else {
+        World.remove(world, this.body1);
+        push();
+        this.Visibility = this.Visibility - 5;
+        tint(255, this.Visibility);
+        pop();
+      }
     }
   }

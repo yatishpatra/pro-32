@@ -1,7 +1,7 @@
 class Polygon {
     constructor(x, y, radius) {
         var options = {
-            'restitution':1.8,
+            'restitution':0.5,
             'friction':1.5,
             'density':2.0,
              isStatic: false
