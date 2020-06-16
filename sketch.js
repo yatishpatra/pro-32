@@ -6,7 +6,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var stand1, stand1, ground1;
 var box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16, box17, box18;
-var polygon1, slingShot;
+var polygon1, slingShot, message1;
 
 function setup() {
   createCanvas(800,400);
@@ -46,6 +46,8 @@ function setup() {
   polygon1 = new Polygon(100, 280, 40);
 
   slingShot = new SlingShot(polygon1.body, {x: 150, y: 150});
+
+  message1 = new Message1(400, 15, 580, 25);
 }
 
 function draw() {
@@ -77,6 +79,7 @@ function draw() {
 
   polygon1.display();
   slingShot.display();
+  message1.display();
 }
 
 function mouseDragged(){
