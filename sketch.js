@@ -45,7 +45,7 @@ function setup() {
 
   polygon1 = new Polygon(100, 280, 40);
 
-  slingShot = new SlingShot(polygon1.body, {x: 150, y: 200});
+  slingShot = new SlingShot(polygon1.body, {x: 150, y: 150});
 }
 
 function draw() {
