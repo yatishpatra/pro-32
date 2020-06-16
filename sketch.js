@@ -29,7 +29,7 @@ function setup() {
   box7 = new Box(390, 195, 30, 40);
   box8 = new Box(420, 195, 30, 40);
 
-  box9 = new Box(390, 55, 30, 40);
+  box9 = new Box(390, 185, 30, 40);
 
   box10 = new Box(590, 135, 30, 40);
   box11 = new Box(620, 135, 30, 40);
