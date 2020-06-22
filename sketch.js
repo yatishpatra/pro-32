@@ -65,6 +65,7 @@ function draw() {
   textSize(20);
   fill("white");
   text("SCORE :" + score, 650, 40);
+  text("Press the space key for another chance!", 400, 380);
 
   Engine.update(engine);
 
