@@ -9,9 +9,10 @@ var box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, b
 var polygon1, slingShot;
 var score = 0;
 var backgroundImg;
+var gameState = "on slingshot";
 
 function preload() {
-  backgroundImg = loadImage("sprites/bg.jpg");
+  backgroundImg = loadImage("Sprites/bg.jpg");
     getBackgroundImg();
 }
 
@@ -113,16 +114,20 @@ function draw() {
 }
 
 function mouseDragged(){
-  Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
+  if(gameState!=="launched"){
+    Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
+  }
 }
 
 function mouseReleased() {
   slingShot.fly();
+  gameState = "launched";
 }
 
 function keyPressed() {
   if(keyCode === 32) {
       slingShot.attach(polygon1.body);
+      gameState = "on slingshot";
   }
 }
 
@@ -132,9 +137,9 @@ async function getBackgroundImg() {
   var date = responseJSON.datetime;
   var hour = date.slice(11, 23);
   if(hour >= 6 && hour <= 19){
-      bg = "sprites/bg.jpg"
+      bg = "Sprites/bg.jpg"
   } else {
-      bg = "sprites/bg1.jpg"
+      bg = "Sprites/bg1.jpg"
   }
   backgroundImg = loadImage(bg);
   console.log(backgroundImg);
