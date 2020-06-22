@@ -33,4 +33,10 @@ class Box {
         pop();
       }
     }
+
+    score() {
+      if(this.Visibility < 0 && this.Visibility > -105){
+          score = score + 1;
+      }
+    }
   }
