@@ -10,10 +10,11 @@ var polygon1, slingShot;
 var score = 0;
 var backgroundImg;
 var gameState = "on slingshot";
+var bg = "Sprites/bg.jpg";
 
 function preload() {
+  getBackgroundImg();
   backgroundImg = loadImage("Sprites/bg.jpg");
-    getBackgroundImg();
 }
 
 function setup() {
@@ -136,8 +137,8 @@ async function getBackgroundImg() {
   var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
   var responseJSON = await response.json();
   var date = responseJSON.datetime;
-  var hour = date.slice(11, 23);
-  if(hour >= 6 && hour <= 19){
+  var hour = date.slice(11, 13);
+  if(hour>=06 && hour<=19){
       bg = "Sprites/bg.jpg"
   } else {
       bg = "Sprites/bg1.jpg"
