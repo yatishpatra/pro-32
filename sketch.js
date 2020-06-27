@@ -127,7 +127,7 @@ function mouseReleased() {
 }
 
 function keyPressed() {
-  if(keyCode === 32 && (polygon.body.speed < 1)) {
+  if(keyCode === 32) {
       slingShot.attach(polygon1.body);
       gameState = "on slingshot";
   }
