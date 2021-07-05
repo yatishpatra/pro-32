@@ -5,7 +5,8 @@ const Constraint = Matter.Constraint;
 
 var engine, world;
 var stand1, stand1, ground1;
-var box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16, box17, box18;
+var box1, box2, box3, box4, box5, box6, box7, box8, box9;
+var box10, box11, box12, box13, box14, box15,box16, box17, box18;
 var polygon1, slingShot;
 var score = 0;
 var backgroundImg;
